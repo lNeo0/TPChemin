@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="524.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="848.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fd.jpg" />
+         </image>
+      </ImageView>
+      <Button alignment="TOP_RIGHT" layoutX="673.0" layoutY="216.0" mnemonicParsing="false" onAction="#VilleDepartButtonClick" text="Valider" textAlignment="CENTER" textFill="#2d4acc">
+         <font><Font size="26.0" />
+         </font></Button>
+      <MenuBar prefHeight="29.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#openCard" text="Carte">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Carte générale" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Nb Trajets">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Diagramme" text="Diagramme" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="Vdepart" layoutX="33.0" layoutY="202.0" promptText="Ville de départ" />
+      <TextField fx:id="Varrive" layoutX="33.0" layoutY="245.0" promptText="Ville d'arrivée" />
+      <TextField fx:id="TCout" alignment="TOP_LEFT" layoutX="244.0" layoutY="245.0" promptText="Coût" />
+      <TextField fx:id="TTemps" alignment="TOP_LEFT" layoutX="438.0" layoutY="245.0" promptText="Temps " />
+      <TextField fx:id="TCO2" alignment="TOP_LEFT" layoutX="438.0" layoutY="202.0" promptText="CO2" />
+      <TextField fx:id="Tconfort" alignment="TOP_LEFT" layoutX="244.0" layoutY="202.0" promptText="Confort" />
+
+      <TableView fx:id="table" layoutX="141.0" layoutY="287.0" prefHeight="210.0" prefWidth="527.0">
+        <columns>
+            <TableColumn fx:id="depart" prefWidth="75.0" text="Départ" />
+            <TableColumn fx:id="arrive" prefWidth="75.0" text="Arrivée" />
+            <TableColumn fx:id="moyen" prefWidth="75.0" text="Moyen" />
+            <TableColumn fx:id="cout" prefWidth="75.0" text="Coût" />
+            <TableColumn fx:id="duree" prefWidth="75.0" text="Temps" />
+            <TableColumn fx:id="co2" prefWidth="75.0" text="CO2" />
+            <TableColumn fx:id="confort" prefWidth="75.0" text="Confort" />
+        </columns>
+      </TableView>
+      <Text fill="#074d80" layoutX="258.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LocaPark">
+         <font>
+            <Font size="41.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <Text fill="#0d58a8" layoutX="45.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obligatoire">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#0c529e" layoutX="389.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option(s)">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="117.0" fitWidth="112.0" layoutX="438.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
